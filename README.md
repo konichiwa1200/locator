@@ -1,0 +1,2 @@
+##Locator App
+Learning MEAN stack by creating a locator app following [Getting MEAN with Mongo, Express, Angular, and Node](https://www.manning.com/books/getting-mean-with-mongo-express-angular-and-node) by [Simon Holmes](https://github.com/simonholmes)
