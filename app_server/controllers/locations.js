@@ -1,14 +1,19 @@
 /* GET Home page. */
 module.exports.homelist = function(req, res, next) {
-  res.render('index', { title: 'Home' });
+  res.render('locations-list', { title: 'Home' });
 };
 
 /* GET Location page. */
 module.exports.locationInfo = function(req, res, next) {
-  res.render('index', { title: 'Location info' });
+  res.render('location-info', { title: 'Location info' });
 };
 
 /* GET Add review page. */
 module.exports.addReview = function(req, res, next) {
-  res.render('index', { title: 'Add review' });
+  res.render('location-review-form', { title: 'Add review' });
+};
+
+/* GET About page. */
+module.exports.about = function(req, res, next) {
+  res.render('generic-text', { title: 'About' });
 };
