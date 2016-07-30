@@ -1,5 +1,7 @@
 extends layout
 
+include _includes/sharedHTMLfunctions
+
 block content
   #banner.page-header
     .col-lg-6
@@ -16,10 +18,7 @@ block content
         h4
           a(href="/location") location.name;
           small &nbsp;
-            -for (var i = 1; i <= locaiton.rating; i++)
-            span.glyphicon.glyphicon-star
-            -for (var i = location.rating; i < 5; i++)
-            span.glyphicon.glyphicon-star-empty
+            +outputRating(location.ratin)
           span.badge.pull-right.badge-default= location.distance
         p.address= location.address
         p
