@@ -23,20 +23,25 @@ var gracefulShutdown = function(msg, callback) {
   });
 };
 
+// for nodemon restarts
 process.once('SIGUSR2', function () {
   gracefulShutdown('nodemon restart', function() {
     process.kill(process.pid, 'SIGUSR2');
   });
 });
 
+// for app shutdowns
 process.on('SIGINT', function () {
   gracefulShutdown('app termination', function() {
     process.exit(0);
   });
 });
 
+// for heroku app shutdowns
 process.on('SIGTERM', function () {
   gracefulShutdown('Heroku app shutdown', function() {
     process.exit(0);
   });
 });
+
+require('./locations')
